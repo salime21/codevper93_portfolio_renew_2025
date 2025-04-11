@@ -17,9 +17,7 @@ export const HeaderTop = () => {
 
             <Navbar expand="lg" className="codevper93__navbar_custom">
                 <Container>
-                    <Navbar.Brand href="#home">
-                        <Image src={codevper93} width={150} />
-                    </Navbar.Brand>
+                    <Image src={codevper93} width={150} />
                 </Container>
             </Navbar>
         </div>
