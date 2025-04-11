@@ -1,0 +1,763 @@
+.form-select:focus {
+    border-color: #86b6fe00 !important;
+    outline: 0 !important;
+    box-shadow: 0 0 0 .25rem rgba(13, 109, 253, 0) !important;
+}
+
+.BP__btn_flat_icon_wapp {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25d366;
+    color: #FFF;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+}
+
+.BP__btn_flat_icon_wapp .whatsapp-icon {
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+
+/* -------------------------------- NAVBAR */
+.header_top_articles {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    background-color: #00060c;
+    padding: 0.5rem 1rem;
+    z-index: 999;
+  }
+  
+  .header_top_articles a {
+    color: #eefaff;
+    position: relative;
+    text-decoration: none;
+    animation: flickerGlitch 2s infinite alternate;
+  }
+  
+  .header_top_articles a:hover {
+    color: #ebebeb;
+    animation: glitchHover 0.3s infinite;
+  }
+  
+  @keyframes flickerGlitch {
+    0% {
+      opacity: 1;
+    }
+    5% {
+      opacity: 0.8;
+      transform: translateX(-1px);
+    }
+    10% {
+      opacity: 1;
+      transform: translateX(1px);
+    }
+    15% {
+      opacity: 0.7;
+      transform: translateY(-1px);
+    }
+    20% {
+      opacity: 1;
+      transform: none;
+    }
+  }
+  
+  @keyframes glitchHover {
+    0% {
+      transform: skew(0deg);
+      text-shadow: none;
+    }
+    20% {
+      transform: skew(-1deg);
+      text-shadow: -1px 0 red, 1px 0 blue;
+    }
+    40% {
+      transform: skew(1deg);
+      text-shadow: 1px 0 green, -1px 0 purple;
+    }
+    60% {
+      transform: skew(0deg);
+      text-shadow: none;
+    }
+    100% {
+      transform: none;
+      text-shadow: none;
+    }
+  }
+  
+.codevper93__header_top_social {
+    background-color: #ffffff;
+    padding: 1%;
+    text-align: right;
+    color: white;
+}
+
+.codevper93__navbar_custom {
+    background-color: rgb(255, 255, 255);
+    padding: 0 !important;
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+.codevper93__header_top_fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1050;
+    background-color: #000;
+}
+
+.codevper93__header_top_social {
+    background-color: #000000;
+    color: white;
+    text-align: center;
+    padding: 5px 0;
+    font-size: 14px;
+}
+
+.codevper93__home_presentation_content {
+    padding-top: 120px;
+}
+
+/* ------------------------------------------------------------ ABOUT ME */
+@keyframes moveGridVertical {
+    0% {
+        background-position: center 0;
+    }
+
+    100% {
+        background-position: center 100%;
+    }
+}
+
+.codevper93__card_bg_content {
+    background-color: #00060c !important;
+    border-radius: 5px;
+    background-image: url("../Imgs/grid1.svg");
+    background-repeat: repeat-y;
+    background-size: cover;
+    animation: moveGridVertical 10s linear infinite;
+    padding: 3%;
+    color: white;
+}
+
+.codevper93__card_bg_content .text_description {
+    background-color: rgb(251, 251, 251);
+    padding: 2%;
+    border-radius: 10px;
+    color: #01060c;
+    font-size: 1.2em;
+}
+
+
+/* ---------------------------------------------------------- BTN GLITCH */
+.codevper93__btn_project_glitch {
+    position: relative;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    border: 1px solid #ececec;
+    color: #ececec;
+    background-color: #0e000000;
+    overflow: hidden;
+    padding: 0.75rem 1.5rem;
+    transition: 0.3s ease-in-out;
+    z-index: 1;
+    letter-spacing: 3px;
+}
+
+.codevper93__btn_project_glitch:hover {
+    background-color: #00000000;
+    /* Azul petróleo */
+    color: #ffffff;
+    /* Amarillo olva */
+}
+
+.codevper93__glitch {
+    position: relative;
+    color: #ececec;
+}
+
+.codevper93__glitch::before,
+.codevper93__glitch::after {
+    content: attr(data-text);
+    position: absolute;
+    left: 0;
+    width: 100%;
+    background: transparent;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    z-index: -1;
+}
+
+.codevper93__glitch::before {
+    animation: glitchTop 1s infinite linear alternate-reverse;
+    color: #0c2c3f;
+    /* Amarillo olva */
+}
+
+.codevper93__glitch::after {
+    animation: glitchBottom 1s infinite linear alternate-reverse;
+    color: #ececec;
+    /* Celeste aqua */
+}
+
+@keyframes glitchTop {
+    0% {
+        clip: rect(0, 9999px, 0, 0);
+        transform: translate(0, 0);
+    }
+
+    10% {
+        clip: rect(0, 9999px, 5px, 0);
+        transform: translate(-2px, -2px);
+    }
+
+    20% {
+        clip: rect(5px, 9999px, 10px, 0);
+        transform: translate(2px, -1px);
+    }
+
+    30% {
+        clip: rect(10px, 9999px, 15px, 0);
+        transform: translate(-1px, 1px);
+    }
+
+    100% {
+        clip: rect(0, 9999px, 0, 0);
+        transform: translate(0, 0);
+    }
+}
+
+@keyframes glitchBottom {
+    0% {
+        clip: rect(0, 9999px, 0, 0);
+        transform: translate(0, 0);
+    }
+
+    10% {
+        clip: rect(15px, 9999px, 20px, 0);
+        transform: translate(1px, 1px);
+    }
+
+    20% {
+        clip: rect(20px, 9999px, 25px, 0);
+        transform: translate(-1px, 2px);
+    }
+
+    30% {
+        clip: rect(25px, 9999px, 30px, 0);
+        transform: translate(2px, 1px);
+    }
+
+    100% {
+        clip: rect(0, 9999px, 0, 0);
+        transform: translate(0, 0);
+    }
+}
+
+/* -------------------------------------------------------- MODAL */
+.modal-header .btn-close {
+    background-color: red !important;
+}
+
+.btn-close:focus {
+    border-color: #86b6fe00;
+    outline: 0;
+    box-shadow: 0 0 0 .25rem rgba(13, 109, 253, 0);
+}
+
+.codevper93__glitch_modal_header {
+    background-color: #210000 !important;
+    color: #ffffff !important;
+    border-bottom: 1px solid #ffffff !important;
+}
+
+.codevper93__glitch_modal_header h5 {
+    position: relative;
+    color: rgb(255, 255, 255);
+    font-size: 1.5rem;
+    font-weight: bold;
+    animation: glitchTextHeader 2s infinite;
+}
+
+.codevper93__glitch_modal_header h5::before,
+.codevper93__glitch_modal_header h5::after {
+    content: attr(data-text);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    color: #f0f;
+    overflow: hidden;
+    clip: rect(0, 900px, 0, 0);
+    z-index: -1;
+}
+
+.codevper93__glitch_modal_header h5::before {
+    animation: glitchHeaderBefore 2s infinite linear alternate-reverse;
+    color: #f0f;
+}
+
+.codevper93__glitch_modal_header h5::after {
+    animation: glitchHeaderAfter 1.5s infinite linear alternate-reverse;
+    color: rgb(255, 255, 255);
+}
+
+@keyframes glitchTextHeader {
+    0% {
+        transform: none;
+    }
+
+    20% {
+        transform: skew(0.5deg, 0.5deg);
+    }
+
+    40% {
+        transform: skew(-1deg, -1deg);
+    }
+
+    60% {
+        transform: skew(0.5deg, 0.5deg);
+    }
+
+    80% {
+        transform: none;
+    }
+
+    100% {
+        transform: skew(-0.3deg, 0.3deg);
+    }
+}
+
+@keyframes glitchHeaderBefore {
+    0% {
+        clip: rect(0, 900px, 0, 0);
+        transform: translate(2px, -2px);
+    }
+
+    20% {
+        clip: rect(0, 900px, 20px, 0);
+        transform: translate(-2px, 2px);
+    }
+
+    40% {
+        clip: rect(10px, 900px, 30px, 0);
+        transform: translate(2px, -1px);
+    }
+
+    60% {
+        clip: rect(5px, 900px, 25px, 0);
+        transform: translate(-1px, 1px);
+    }
+
+    80% {
+        clip: rect(0, 900px, 15px, 0);
+        transform: translate(1px, -1px);
+    }
+
+    100% {
+        clip: rect(0, 900px, 0, 0);
+        transform: translate(0);
+    }
+}
+
+@keyframes glitchHeaderAfter {
+    0% {
+        clip: rect(0, 900px, 0, 0);
+        transform: translate(-1px, 1px);
+    }
+
+    25% {
+        clip: rect(10px, 900px, 25px, 0);
+        transform: translate(1px, -1px);
+    }
+
+    50% {
+        clip: rect(5px, 900px, 20px, 0);
+        transform: translate(-2px, 2px);
+    }
+
+    75% {
+        clip: rect(15px, 900px, 30px, 0);
+        transform: translate(2px, -2px);
+    }
+
+    100% {
+        clip: rect(0, 900px, 0, 0);
+        transform: translate(0);
+    }
+}
+
+.codevper93__modal_bg {
+    position: relative;
+    background: #0a0a0a;
+    border-bottom: 2px solid #ffffff;
+    color: #ffffff;
+    overflow: hidden;
+    box-shadow: 0 0 10px #ffffff, 0 0 20px rgba(0, 255, 247, 0.4);
+    animation: glitchCardFlicker 2.5s infinite alternate;
+}
+
+.codevper93__modal_bg::before,
+.codevper93__modal_bg::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: linear-gradient(to right,
+            rgba(0, 255, 255, 0.15),
+            rgba(0, 255, 255, 0.05));
+    mix-blend-mode: screen;
+    pointer-events: none;
+    z-index: 1;
+    opacity: 0.2;
+    animation: glitchSlide 3s infinite linear;
+}
+
+.codevper93__modal_bg::after {
+    animation-delay: 1.5s;
+    opacity: 0.1;
+}
+
+.codevper93__glitch_header_content {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    position: relative;
+    z-index: 2;
+}
+
+.codevper93__glitch_header_content .glitch-title {
+    animation: glitchTextShift 1.8s infinite;
+    color: #ffb4b4;
+    position: relative;
+    letter-spacing: 3px;
+}
+
+.codevper93__glitch_header_content .glitch-avatar {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+}
+
+.codevper93__glitch_header_content .glitch-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    position: relative;
+    z-index: 1;
+    filter: brightness(1.1);
+}
+
+.codevper93__glitch_header_content .glitch-avatar::before,
+.codevper93__glitch_header_content .glitch-avatar::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('../Imgs/codevper93_avatar.jpg') no-repeat center center;
+    background-size: cover;
+    opacity: 0.3;
+    mix-blend-mode: screen;
+    z-index: 2;
+    pointer-events: none;
+    animation: glitch-static 1s infinite;
+}
+
+.codevper93__glitch_header_content .glitch-avatar::after {
+    animation-delay: 0.3s;
+    opacity: 0.2;
+}
+
+@keyframes glitch-static {
+    0% {
+        clip-path: inset(20% 0 75% 0);
+        transform: translate(0);
+    }
+
+    10% {
+        clip-path: inset(30% 0 55% 0);
+        transform: translate(2px, -1px);
+    }
+
+    20% {
+        clip-path: inset(15% 0 65% 0);
+        transform: translate(-2px, 1px);
+    }
+
+    30% {
+        clip-path: inset(25% 0 60% 0);
+        transform: translate(1px, -1px);
+    }
+
+    40%,
+    100% {
+        clip-path: inset(0 0 0 0);
+        transform: translate(0);
+    }
+}
+
+.codevper93__glitch_modal_body {
+    background-color: #000;
+    color: #ffffff;
+    flex: 1;
+    overflow-y: auto;
+    padding: 2rem;
+    background-image: url("../Imgs/grid1.svg") !important;
+    background-repeat: repeat-y;
+    background-size: cover;
+    background-attachment: fixed !important;
+    animation: moveGridVertical 10s linear infinite;
+}
+
+.glitch-fullscreen-modal .modal-dialog {
+    width: 100vw;
+    max-width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+.glitch-fullscreen-modal .modal-content {
+    height: 100vh;
+    border-radius: 0;
+    background-color: #0a0a0a;
+    color: rgb(255, 255, 255);
+    border: 2px solid rgb(255, 255, 255);
+    box-shadow: 0 0 15px rgb(255, 255, 255), 0 0 30px #00f;
+    display: flex;
+    flex-direction: column;
+    animation: flicker 1.5s infinite alternate;
+}
+
+@keyframes flicker {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.95;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/* -------------------------------------------------------- CARDS PROJECTS */
+.BP__dev_content {
+    min-height: 100vh;
+    padding-top: 10%;
+}
+
+.BP__dev_content .result_num {
+    margin-top: 5%;
+    margin-bottom: 3%;
+    text-align: right;
+    color: #ffffff;
+    font-size: 1.5em;
+    font-family: font_welcome_subtitle;
+    font-weight: bold;
+}
+
+.BP__home_welcome_text_presentation_content .content_dev {
+    padding-left: 5%;
+    padding-right: 5%;
+    margin-top: 3%;
+}
+
+/* --------------------------------------------- DEV/PROJECTS */
+.alert_nothing_to_show {
+    background-color: transparent !important;
+    padding: 15% !important;
+    border-radius: 0 !important;
+    color: #edffdf !important;
+    letter-spacing: 3px;
+    border: 1px solid transparent !important;
+}
+
+.bailador_project_dev_project_card {
+    background-color: transparent !important;
+    padding: 5%;
+}
+
+.bailador_project_dev_project_card:hover {
+    filter: grayscale(.5);
+}
+
+.bailador_project_dev_project_card .card_header_dp {
+    background-color: transparent;
+    padding: 2%;
+
+    color: #edffdf !important;
+    font-family: font_welcome_subtitle;
+    margin-bottom: 5%;
+}
+
+.bailador_project_dev_project_card .card_footer_dp {
+    text-align: center;
+    background-color: transparent;
+    padding: 2%;
+
+    color: #edffdf !important;
+    font-family: font_welcome_subtitle;
+    margin-top: 5%;
+}
+
+.bailador_project_dev_project_card .card_footer_dp a {
+    color: #edffdf;
+    text-decoration: none;
+}
+
+.bailador_project_dev_project_card .card_footer_dp a:hover {
+    color: #f64141;
+    text-decoration: none;
+}
+
+.bailador_project_dev_project_card .title_name {
+    font-size: 1em;
+    margin-bottom: 5%;
+    margin-top: 3%;
+    letter-spacing: 3px;
+    color: #edffdf;
+}
+
+.bailador_project_dev_project_card .btn_info_dp {
+    background-color: transparent !important;
+    border: 1px dotted #edffdf !important;
+    border-bottom: 2px solid #edffdf !important;
+    pointer-events: none;
+    letter-spacing: 3px;
+}
+
+.bailador_project_dev_project_card .glowing {
+    filter: url(#glow);
+    animation: glowEffect 1.5s infinite alternate;
+}
+
+@keyframes glowEffect {
+    0% {
+        filter: drop-shadow(0 0 5px #f64141);
+    }
+
+    100% {
+        filter: drop-shadow(0 0 20px rgba(246, 65, 65, 0.50));
+    }
+}
+
+.bailador_project_dev_project_card .card_tags_tech {
+    background-image: url("../Imgs/bg_banner_works.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: grayscale(1);
+    background-attachment: fixed;
+    margin-bottom: 5%;
+    margin-top: 5%;
+    overflow-y: auto;
+    height: 100px;
+    text-align: center;
+    color: #f64141;
+}
+
+/* Keyframes */
+@keyframes glitchCardFlicker {
+    0% {
+        filter: brightness(1);
+    }
+
+    50% {
+        filter: brightness(1.1);
+    }
+
+    100% {
+        filter: brightness(1);
+    }
+}
+
+@keyframes glitchSlide {
+    0% {
+        transform: translateX(-10%);
+    }
+
+    100% {
+        transform: translateX(10%);
+    }
+}
+
+@keyframes glitchTextShift {
+    0% {
+        text-shadow: 1px 0 rgb(116, 7, 7), -1px 0 rgb(73, 10, 10);
+    }
+
+    20% {
+        text-shadow: -2px -1px rgb(117, 11, 11), 2px 1px rgb(82, 10, 10);
+    }
+
+    40% {
+        text-shadow: 2px -2px rgb(210, 58, 58), -2px 2px rgb(113, 9, 9);
+    }
+
+    60% {
+        text-shadow: 1px 1px rgb(48, 1, 1), -1px -1px rgb(80, 16, 16);
+    }
+
+    80% {
+        text-shadow: -1px 1px rgb(124, 5, 5), 1px -1px rgb(79, 10, 10);
+    }
+
+    100% {
+        text-shadow: 1px 0 rgb(113, 9, 9), -1px 0 rgb(255, 0, 0);
+    }
+}
+ 
+/* footer */
+.footer_contact {
+    color: white;
+    font-family: font_welcome_subtitle;
+}
+
+.footer_contact .content_footer {
+    text-align: center;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    background-color: #00060c;
+}
+
+.social_network_content {
+    padding: 1%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.social_network_content a {
+    border: 1px solid white;
+    margin-right: 1%;
+    padding: .5%;
+    cursor: pointer;
+    filter: grayscale(.5);
+}
+
+.social_network_content a:hover {
+    filter: grayscale(0);
+}

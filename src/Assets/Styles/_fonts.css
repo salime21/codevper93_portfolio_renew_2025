@@ -1,0 +1,17 @@
+@font-face {
+    font-family: font_welcome_title;
+    src: url('../fonts/Play-Bold.ttf');
+}
+
+
+@font-face {
+    font-family: font_welcome_subtitle;
+    src: url('../fonts/AlegreyaSansSC-Light.ttf');
+}
+
+
+
+/* @font-face {
+    font-family: font_text;
+    src: url('../fonts/Barlow_text.ttf');
+} */
